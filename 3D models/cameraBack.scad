@@ -1,5 +1,5 @@
 /* This piece was designed by Shawn French (McMaster University, Ontario, Canada)
-It is part of the SCIFIcube (SCIentific Fluorescence Imaging cube), a small and portable 3D-printed
+It is part of the PFIbox (Printed Fluorescence Imaging box), a small and portable 3D-printed
 fluorescence imager for bacteria, yeast, or any colony-forming organism.  It works well with solid
 agar medium, and can image high density samples rapidly over time.  
 
