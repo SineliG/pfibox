@@ -3,7 +3,7 @@ It is part of the PFIbox (Printed Fluorescence Imaging box), a small and portabl
 fluorescence imager for bacteria, yeast, or any colony-forming organism.  It works well with solid
 agar medium, and can image high density samples rapidly over time.  
 
-Details can be found at https://www.github.com/sfrench007/scificube
+Details can be found at https://www.github.com/sfrench007/pfibox
 
 Copyright 2017 McMaster University
 
