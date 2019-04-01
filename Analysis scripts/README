@@ -1,0 +1,17 @@
+These are analysis scripts and sample data files.  Their usage is outlined
+below, and can be used when following along with the Nature Protocol methods.
+The script 'analysisCode.R' will use the raw 'timecourse_results.csv' file, and
+the 'legend.txt' file to produce a 'gfpData.Rdata' list file for importing into
+the R statistical programming language.  The 'timecourse_results.csv' file is
+the output of a MOPS minimal medium screen using the E. coli K-12 MG1655
+promoter-reporter libary of Zaslaver et al 
+(https://www.nature.com/articles/nmeth895).
+
+When using 'analysisCode.R', follow the instructions in the header of the script
+file, but please update 'timecourse_results.csv' to your locally-produced file,
+as the file in the GitHub repository is the sample data.  Also include your own
+'legend.txt' file, as the file from the GitHub repository corresponds to the 
+promoter-reporter library used in the original Cell Systems paper
+
+doi: 
+https://www.sciencedirect.com/science/article/pii/S2405471218302837?via%3Dihub
