@@ -319,7 +319,6 @@ for(i in 1:6144) {
 
 # Background subtract the nearest promoterless plasmid GFP
 gfpBackSub <- loessData-pua66GFPout
-# constitGFPout <- t(apply(constitGFPout,1,function(x) x/max(x)))
 
 # Generate the pseudo-OD normalized data using the consitutive reporters. 
 normLoessGFP <- (gfpBackSub/constitGFPout)
@@ -331,7 +330,7 @@ dGFPdtGFP <- t(apply(normLoessGFP,1,diff))
 # One final smooting of the promoter activity data - the GFP/biomass data is often a little
 # 'jittery', so taking the first-order derivative reflects even slight changes in that curve.
 # Doing another Loess smooth here follows the trends of the curves.
-loessdGFPdtGFP <- t(apply(dGFPdtGFP[,1:216],1,function(x) predict(loess(x~timepoints[-1][1:216],span=smoothing))))
+loessdGFPdtGFP <- t(apply(dGFPdtGFP,1,function(x) predict(loess(x~timepoints[-1],span=smoothing))))
 # Then scale between 0-1 for clustering purposes downstream
 loessdGFPdtGFP_scale <- t(apply(loessdGFPdtGFP,1,normCurve))
 
@@ -343,7 +342,7 @@ gfpData <- list()
 gfpData[["timecourse_results"]]$legend <- legendGFP
 gfpData[["timecourse_results"]]$raw <- rawData
 gfpData[["timecourse_results"]]$raw.loess <- loessData
-gfpData[["timecourse_results"]]$constit.normalized <- normLoessGFP[,20:ncol(normLoessGFP)]
+gfpData[["timecourse_results"]]$constit.normalized <- normLoessGFP
 gfpData[["timecourse_results"]]$promoter.activity <- loessdGFPdtGFP_scale
 
 # Export the .Rdata file containing the list
