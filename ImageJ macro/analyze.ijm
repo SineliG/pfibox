@@ -134,8 +134,8 @@ function prepareImage() {
 
 // Auto-crop image with some padding (25 pixel default)
 function cropImage(padding) {
-	xDim = newArray();
-	yDim = newArray();
+	xDim = newArray(10);
+	yDim = newArray(10);
 	xD = 0;
 	yD = 0;
 
