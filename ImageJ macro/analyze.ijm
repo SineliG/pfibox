@@ -141,6 +141,8 @@ function prepareImage() {
 	run("Apply LUT", "stack");
 	rename(tempName);
 	run("Flip Horizontally", "stack");
+	// Uncomment the following line if filters are removed (white light images), comment it out if using fluorescence filters
+	// run("Invert", "stack")
 	run("Rotate... ");
 }
 
