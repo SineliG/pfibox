@@ -2,7 +2,7 @@
 # a gfpData.Rdata file.  The code requires 'legend.txt' to be in the directory along
 # with the 'timecourse_results.csv' file.  Look at the legend.txt file that I am sending
 # with this code, and if you are using a different legend, please update it accordingly, as
-# it will take promoter names and such from this file.
+# it will take promoter names and such from this file
 
 # To use this code, put timecourse_results.csv, and legend.txt, in the same directory
 # and set this as the working directory with 'setwd(<directory name>)' in the R terminal.
